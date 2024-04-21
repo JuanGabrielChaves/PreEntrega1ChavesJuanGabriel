@@ -9,7 +9,7 @@ function App() {
         <div>
             <ThemeProvider theme={themaClaro}>
                 <Layout>
-                    <ItemListContainer greeting={"Bienvenidos a The Bookstore"} />
+                    <ItemListContainer />
                 </Layout>
             </ThemeProvider>
         </div>
