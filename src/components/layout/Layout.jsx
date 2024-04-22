@@ -1,12 +1,16 @@
 /** @format */
 
+import { ThemeProvider } from "@mui/material";
 import NavBar from "../../components/layout/navBar/NavBar";
-const Layout = ({ children }) => {
+import { Outlet } from "react-router-dom";
+import { themaClaro } from "../common/themeStyles.js";
+const Layout = () => {
     return (
-        <div>
+        <ThemeProvider theme={themaClaro}>
             <NavBar />
-            {children}
-        </div>
+            {/* Al manejar rutas hay que usar Outlet en vez de children */}
+            <Outlet />
+        </ThemeProvider>
     );
 };
 
