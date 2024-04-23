@@ -1,14 +1,18 @@
 /** @format */
 
-import { IconButton } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const CounterPresentacional = ({ restar, sumar, contador, onAdd }) => {
     return (
         <div>
-            <button onClick={restar}>restar</button>
-            <h3>{contador}</h3>
-            <button onClick={sumar}>sumar</button>
+            <Button variant="contained" onClick={restar}>
+                -
+            </Button>
+            <h3 style={{ margin: 6, color: "#ffff", textAlign: "center" }}>{contador}</h3>
+            <Button variant="contained" onClick={sumar}>
+                +
+            </Button>
             <IconButton color="white" title="Agregar al carrito" onClick={() => onAdd(contador)}>
                 <AddShoppingCartIcon fontSize="large" color="action" />
             </IconButton>

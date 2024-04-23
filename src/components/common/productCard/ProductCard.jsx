@@ -5,17 +5,16 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ title, price, img, id }) => {
     return (
-        <Grid container spacing={1} m={1}>
-            <Grid item xs={11} m={0} width={325}>
-                <Card sx={{ maxWidth: 350 }}>
-                    <CardMedia sx={{ height: 500 }} image={img} component="img" alt={`imagen del libro ${title}`} />
+        <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 5, md: 7 }}>
+            <Grid item width={325}>
+                <Card sx={{ width: 250, marginLeft: 3, marginTop: 3 }}>
+                    <CardMedia image={img} component="img" alt={`imagen del libro ${title}`} />
                     <CardContent>
-                        <Typography gutterBottom variant="h5" component="div" height={30} mb={5}>
-                            {title}
-                        </Typography>
-
-                        <Typography variant="h6">$ {price}.-</Typography>
+                        <Typography>{title}</Typography>
                     </CardContent>
+                    <Typography ml={2} fontWeight={"bold"}>
+                        $ {price}.-
+                    </Typography>
                     <CardActions>
                         <Link to={`/itemDetail/${Number(id)}`}>
                             <Button size="small">Ver detalle</Button>
