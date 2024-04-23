@@ -1,19 +1,16 @@
 /** @format */
-import { IconButton } from "@mui/material";
 import "./ItemDetail.css";
-import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "../../common/themeStyles";
+import { CounterContainer } from "../../common/counter/CounterContainer";
 
-const ItemDetail = ({ item }) => {
+const ItemDetail = ({ item, onAdd }) => {
     return (
         <>
             <h1>{item.title}</h1>
             <div className="grid-container">
                 <div className="addToCart">
-                    <IconButton color="white" title="Agregar al carrito">
-                        <AddShoppingCartIcon fontSize="large" color="action" />
-                    </IconButton>
                     <h2>$ {item.price}.-</h2>
+                    <CounterContainer stock={item.stock} onAdd={onAdd} />
                 </div>
                 <div className="imgDetail">
                     <img src={item.img} alt={`imagen del libro: ${item.title}`} />

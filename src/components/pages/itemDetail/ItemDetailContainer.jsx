@@ -24,8 +24,12 @@ const ItemDetailContainer = () => {
             setItem(res);
         });
     }, [id]);
-    console.log(item);
-    return <ItemDetail item={item} />;
+
+    const onAdd = (cantidad) => {
+        let bodyToSend = { ...item, quantity: cantidad };
+        console.log(bodyToSend);
+    };
+    return <ItemDetail item={item} onAdd={onAdd} />;
 };
 
 export default ItemDetailContainer;
