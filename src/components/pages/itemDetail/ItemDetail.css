@@ -32,3 +32,16 @@ h2 {
     font-family: "Courier New", Courier, monospace;
     overflow: auto;
 }
+.detail::-webkit-scrollbar {
+    width: 7px;
+}
+
+.detail::-webkit-scrollbar-track {
+    background: #e4c3bd;
+}
+
+.detail::-webkit-scrollbar-thumb {
+    background-color: #e4c3bd;
+    border-radius: 20px;
+    border: 3px solid #a28b6d;
+}

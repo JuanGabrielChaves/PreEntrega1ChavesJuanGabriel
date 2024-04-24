@@ -2,6 +2,7 @@
 
 import Layout from "./components/layout/Layout";
 import Cart from "./components/pages/cart/Cart.jsx";
+import Checkout from "./components/pages/checkout/Checkout.jsx";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer.jsx";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer.jsx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -17,7 +18,7 @@ function App() {
                     {/* Ruta personalizada: Tiene la parte estática y la parte dinámica :id*/}
                     <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
                     <Route path="/cart" element={<Cart />}></Route>
-
+                    <Route path="/checkout" element={<Checkout />}></Route>
                     <Route path="/category/:name" element={<ItemListContainer />}></Route>
                 </Route>
             </Routes>
