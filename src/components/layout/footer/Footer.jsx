@@ -6,7 +6,6 @@ import "./Footer.css";
 const Footer = () => {
     return (
         <div>
-            {" "}
             <Box
                 sx={{
                     width: "100%",

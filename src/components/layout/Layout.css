@@ -1,0 +1,5 @@
+/** @format */
+
+.content {
+    min-height: calc(100vh - 35vh);
+}
