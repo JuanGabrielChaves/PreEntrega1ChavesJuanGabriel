@@ -4,6 +4,8 @@ import { products } from "../../productsMock";
 import "./ItemListContainerStyles.css";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import SkeletonCard from "../../common/skeleton/SkeletonCard.jsx";
+import "./ItemListContainerStyles.css";
 
 const ItemListContainer = () => {
     const { name } = useParams();
@@ -30,7 +32,28 @@ const ItemListContainer = () => {
                 setError(error);
             });
     }, [name]);
-
+    if (items.length === 0) {
+        return (
+            <div className="skeletonContainer">
+                <div>
+                    {" "}
+                    <SkeletonCard />
+                </div>
+                <div>
+                    <SkeletonCard />
+                </div>
+                <div>
+                    <SkeletonCard />
+                </div>
+                <div>
+                    <SkeletonCard />
+                </div>
+                <div>
+                    <SkeletonCard />
+                </div>
+            </div>
+        );
+    }
     return <ItemList items={items} error={error} />;
 };
 
