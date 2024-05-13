@@ -15,7 +15,9 @@ const ItemListContainer = () => {
         const getProducts = new Promise((resolve, reject) => {
             let resultado = true;
             if (resultado) {
-                resolve(name ? productsFiltered : products);
+                setTimeout(() => {
+                    resolve(name ? productsFiltered : products);
+                }, 3000);
             } else {
                 reject({ status: 400, message: "Algo salio mal" });
             }

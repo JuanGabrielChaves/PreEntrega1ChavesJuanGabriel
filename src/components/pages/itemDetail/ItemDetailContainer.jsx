@@ -1,14 +1,18 @@
 /** @format */
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { products } from "../../productsMock";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 const ItemDetailContainer = () => {
+    //Utilizacion de la función addToCart del contexto CartContext
+    const { addToCart, getQuantityById } = useContext(CartContext);
+
     // Utilización del hook useParams:
     const { id } = useParams();
     const [item, setItem] = useState({});
-
+    let initial = getQuantityById(Number(id));
     useEffect(() => {
         //Como el id de la base es de tipo number y lo que llega al front es de tipo string lo convierto
         let itemEncontrado = products.find((product) => product.id === Number(id));
@@ -26,10 +30,10 @@ const ItemDetailContainer = () => {
     }, [id]);
 
     const onAdd = (cantidad) => {
-        let bodyToSend = { ...item, quantity: cantidad };
-        console.log(bodyToSend);
+        let product = { ...item, quantity: cantidad };
+        addToCart(product);
     };
-    return <ItemDetail item={item} onAdd={onAdd} />;
+    return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 };
 
 export default ItemDetailContainer;

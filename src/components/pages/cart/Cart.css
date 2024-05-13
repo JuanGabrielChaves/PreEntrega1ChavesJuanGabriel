@@ -4,4 +4,31 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    gap: 1rem;
+}
+
+.listContainer {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.itemBtn {
+    justify-self: end;
+}
+
+.itemContainer {
+    margin: 2px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    background-color: rgb(197, 188, 188);
+    font-size: 1.2rem;
 }

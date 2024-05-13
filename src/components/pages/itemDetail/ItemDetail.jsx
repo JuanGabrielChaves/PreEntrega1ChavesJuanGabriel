@@ -3,14 +3,14 @@ import "./ItemDetail.css";
 import "../../common/themeStyles";
 import { CounterContainer } from "../../common/counter/CounterContainer";
 
-const ItemDetail = ({ item, onAdd }) => {
+const ItemDetail = ({ item, onAdd, initial }) => {
     return (
         <>
             <h1>{item.title}</h1>
             <div className="grid-container">
                 <div className="addToCart">
                     <h2>$ {item.price}.-</h2>
-                    <CounterContainer stock={item.stock} onAdd={onAdd} />
+                    <CounterContainer stock={item.stock} onAdd={onAdd} initial={initial} />
                 </div>
                 <div className="imgDetail">
                     <img src={item.img} alt={`imagen del libro: ${item.title}`} />
