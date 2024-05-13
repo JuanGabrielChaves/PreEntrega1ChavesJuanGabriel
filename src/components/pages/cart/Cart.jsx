@@ -3,7 +3,7 @@
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Cart.css";
-const Cart = ({ cart, clearCart, deleteProductById, totalPrice }) => {
+const Cart = ({ cart, clearCartAlert, deleteProductById, totalPrice }) => {
     console.log(cart);
     return (
         <div>
@@ -29,7 +29,7 @@ const Cart = ({ cart, clearCart, deleteProductById, totalPrice }) => {
             <h2>El total a pagar es $ {totalPrice}</h2>
             {cart.length > 0 && (
                 <div className="btn">
-                    <Button variant="contained" onClick={clearCart}>
+                    <Button variant="contained" onClick={clearCartAlert}>
                         Limpiar Carrito
                     </Button>
                     <Link to={"/checkout"}>

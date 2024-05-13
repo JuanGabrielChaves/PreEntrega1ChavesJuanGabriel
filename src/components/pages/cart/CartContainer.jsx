@@ -4,10 +4,10 @@ import Cart from "./Cart";
 import { CartContext } from "../../../context/CartContext";
 
 const CartContainer = () => {
-    const { cart, clearCart, deleteProductById, getTotalPrice } = useContext(CartContext);
+    const { cart, clearCartAlert, deleteProductById, getTotalPrice } = useContext(CartContext);
     let totalPrice = getTotalPrice();
 
-    return <Cart cart={cart} clearCart={clearCart} deleteProductById={deleteProductById} totalPrice={totalPrice} />;
+    return <Cart cart={cart} clearCartAlert={clearCartAlert} deleteProductById={deleteProductById} totalPrice={totalPrice} />;
 };
 
 export default CartContainer;

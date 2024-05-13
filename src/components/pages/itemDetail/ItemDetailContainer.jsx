@@ -4,7 +4,7 @@ import { products } from "../../productsMock";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../../context/CartContext";
-
+import Swal from "sweetalert2";
 const ItemDetailContainer = () => {
     //Utilizacion de la función addToCart del contexto CartContext
     const { addToCart, getQuantityById } = useContext(CartContext);
@@ -32,6 +32,13 @@ const ItemDetailContainer = () => {
     const onAdd = (cantidad) => {
         let product = { ...item, quantity: cantidad };
         addToCart(product);
+        Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Agregado al carrito",
+            showConfirmButton: false,
+            timer: 1500,
+        });
     };
     return <ItemDetail item={item} onAdd={onAdd} initial={initial} />;
 };
