@@ -1,38 +1,42 @@
 /** @format */
 
 import { Button, TextField } from "@mui/material";
-import { useState } from "react";
 import "./Checkout.css";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 const Checkout = () => {
-    const [info, setInfo] = useState({
-        nombre: "",
-        telefono: "",
-        email: "",
+    const { handleChange, handleSubmit, errors } = useFormik({
+        initialValues: {
+            nombre: "",
+            telefono: "",
+            email: "",
+        },
+        onSubmit: () => {},
+        validationSchema: Yup.object({
+            nombre: Yup.string().required("este campo es obligatorio").min(3, "minimo 3 caracteres"),
+            telefono: Yup.string().required("este campo es obligatorio").min(8, "minimo 8 caracteres"),
+            email: Yup.string().email("debe ser mail valido").required("este campo es obligatorio"),
+        }),
+        validateOnChange: false,
     });
 
-    const handleChange = (e) => {
-        let { name, value } = e.target;
-        setInfo({ ...info, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(info);
-    };
-
     return (
-        <div className="container">
-            <form action="" onSubmit={handleSubmit} className="form">
-                <TextField fullWidth={true} id="nombre" name="nombre" label="nombre" variant="outlined" onChange={handleChange} margin="normal" />
-                <TextField fullWidth={true} id="telefono" name="telefono" label="telefono" variant="outlined" onChange={handleChange} margin="normal" />
-                <TextField fullWidth={true} id="email" name="email" label="email" variant="outlined" onChange={handleChange} margin="normal" />
-                <div className="btn">
-                    <Button type="submit" variant="contained">
-                        ENVIAR
-                    </Button>
-                </div>
-            </form>
-        </div>
+        <>
+            <h3>Para finalizar ingrese los datos de contacto</h3>
+            <div className="container">
+                <form action="" onSubmit={handleSubmit} className="form">
+                    <TextField className="inputField" fullWidth={true} id="nombre" name="nombre" label="nombre" variant="outlined" onChange={handleChange} margin="dense" error={errors.nombre ? true : false} helperText={errors.nombre} />
+                    <TextField className="inputField" fullWidth={true} id="telefono" name="telefono" label="telefono" variant="outlined" onChange={handleChange} margin="dense" error={errors.telefono ? true : false} helperText={errors.telefono} />
+                    <TextField className="inputField" fullWidth={true} id="email" name="email" label="email" variant="outlined" onChange={handleChange} margin="dense" error={errors.email ? true : false} helperText={errors.email} />
+                    <div className="btn">
+                        <Button type="submit" variant="contained">
+                            ENVIAR
+                        </Button>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 };
 

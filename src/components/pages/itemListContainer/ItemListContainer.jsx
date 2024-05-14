@@ -1,42 +1,59 @@
 /** @format */
 import { useEffect, useState } from "react";
-import { products } from "../../productsMock";
 import "./ItemListContainerStyles.css";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import SkeletonCard from "../../common/skeleton/SkeletonCard.jsx";
 import "./ItemListContainerStyles.css";
+import { db } from "../../../firebaseConfig.js";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
     const { name } = useParams();
     const [items, setItems] = useState([]);
     const [error, setError] = useState(null);
-    useEffect(() => {
-        let productsFiltered = products.filter((product) => product.category === name);
 
-        const getProducts = new Promise((resolve, reject) => {
-            let resultado = true;
-            if (resultado) {
-                setTimeout(() => {
-                    resolve(name ? productsFiltered : products);
-                }, 3000);
-            } else {
-                reject({ status: 400, message: "Algo salio mal" });
-            }
-        });
-        getProducts
-            .then((res) => {
-                setItems(res);
-            })
-            .catch((error) => {
-                setError(error);
+    useEffect(() => {
+        //Trae todos los documentos:
+        // const productsCollection = collection(db, "products");
+        // getDocs(productsCollection).then((res) => {
+        //     let newArray = res.docs.map((doc) => {
+        //         return { id: doc.id, ...doc.data() };
+        //     });
+        //     setItems(newArray);
+        // });
+
+        // Trae los documentos filtrados por el nombre:
+        // const productsCollection = collection(db, "products");
+        // let consulta = query(productsCollection, where("category", "==", name));
+        // getDocs(consulta).then((res) => {
+        //     let newArray = res.docs.map((doc) => {
+        //         return { id: doc.id, ...doc.data() };
+        //     });
+        //     setItems(newArray);
+        // });
+
+        const productsCollection = collection(db, "products");
+        let consulta = productsCollection;
+        if (name) {
+            consulta = query(productsCollection, where("category", "==", name));
+        }
+        getDocs(consulta).then((res) => {
+            let newArray = res.docs.map((doc) => {
+                return { id: doc.id, ...doc.data() };
             });
+            setItems(newArray);
+        });
     }, [name]);
+
+    // const addDocProductsToDB = () => {
+    //     let productsCollection = collection(db, "products");
+    //     products.forEach((product) => addDoc(productsCollection, product));
+    // };
     if (items.length === 0) {
         return (
             <div className="skeletonContainer">
                 <div>
-                    {" "}
                     <SkeletonCard />
                 </div>
                 <div>

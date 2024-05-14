@@ -2,27 +2,6 @@
 
 export const products = [
     {
-        id: 1,
-        title: "Ready Player One",
-        price: 7000,
-        stock: 5,
-        description:
-            "Estamos en el año 2044 y, como el resto de la humanidad, Wade Watts prefiere mil veces el videojuego de OASIS al cada vez más sombrío mundo real. Se afirma que esconde las piezas de un rompecabezas diabólico cuya resolución conduce a una fortuna incalculable. Durante años, millones de humanos han intentado dar con ellas, sin éxito. De repente, Wade logra resolver el primer rompecabezas del premio, y a partir de ese momento debe competir contra miles de jugadores para conseguir el trofeo. La única forma de sobrevivir es ganar. ‘Ready Player One’, el impresionante debut de Ernest Cline, está revolucionando la literatura de género en Estados Unidos. Antes incluso de su publicación, convenció a la Warner Bros., de convertirlo en su próxima gran producción, a agentes y editores de medio mundo de que compraran sus derechos, y cautivó a autores de la talla de Charlaine Harris y Patrick Rothfuss, a quien, según ha confesado, le pareció un libro escrito por él mismo. Desde entonces, esta novela ha seducido a la crítica y ha alcanzado las listas de más vendidos del New York Times y Amazon.",
-        category: "ciencia-ficción",
-        img: "https://assets.lectulandia.com/b/Ernest%20Cline/Ready%20Player%20One%20(4836)/big.jpg",
-    },
-    {
-        id: 2,
-        title: "La chica del tren",
-        price: 8000,
-        stock: 3,
-        description:
-            "¿Estabas en el tren de las 8.04? ¿Viste algo sospechoso? Rachel, sí. Rachel toma siempre el tren de las 8.04 h. Cada mañana lo mismo: el mismo paisaje, las mismas casas… y la misma parada en la señal roja. Son solo unos segundos, pero le permiten observar a una pareja desayunando tranquilamente en su terraza.Siente que los conoce y se inventa unos nombres para ellos: Jess y Jason. Su vida es perfecta, no como la suya. Pero un día ve algo. Sucede muy deprisa, pero es suficiente. ¿Y si Jess y Jason no son tan felices como ella cree? ¿Y si nada es lo que parece? Tú no la conoces. Ella a ti, sí.",
-        category: "novela",
-        img: "https://assets.lectulandia.com/b/ab/Paula%20Hawkins/La%20chica%20del%20tren%20(1)/big.jpg",
-    },
-    {
-        id: 3,
         title: "IT",
         price: 8100,
         stock: 95,
@@ -32,7 +11,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/Stephen%20King/It%20(4930)/big.jpg",
     },
     {
-        id: 4,
         title: "Origen",
         price: 9320,
         stock: 145,
@@ -42,7 +20,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Dan%20Brown/Origen%20(4)/big.jpg",
     },
     {
-        id: 5,
         title: "Un monstruo viene a verme",
         price: 6400,
         stock: 101,
@@ -51,7 +28,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Patrick%20Ness/Un%20monstruo%20viene%20a%20verme%20(1)/big.jpg",
     },
     {
-        id: 6,
         title: "El principito",
         price: 5500,
         stock: 300,
@@ -61,7 +37,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/Antoine%20de%20Saint-Exupery/El%20principito%20(2677)/big.jpg",
     },
     {
-        id: 7,
         title: "El psicoanalista",
         price: 8750,
         stock: 55,
@@ -71,7 +46,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/John%20Katzenbach/El%20psicoanalista%20(1007)/big.jpg",
     },
     {
-        id: 8,
         title: "El exorcista",
         price: 7200,
         stock: 32,
@@ -81,7 +55,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/William%20Peter%20Blatty/El%20Exorcista%20Ed%20Emece%20latinoamerica%20(4)/big.jpg",
     },
     {
-        id: 9,
         title: "Carrie",
         price: 6500,
         stock: 10,
@@ -92,7 +65,6 @@ export const products = [
     },
 
     {
-        id: 11,
         title: "Los adversarios",
         price: 5900,
         stock: 12,
@@ -102,7 +74,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/John%20Grisham/Los%20adversarios%20(30)/big.jpg",
     },
     {
-        id: 13,
         title: "Quédate a mi lado",
         price: 5900,
         stock: 12,
@@ -112,7 +83,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/J%20Lynn/Quedate%20a%20mi%20lado%20(2)/big.jpg",
     },
     {
-        id: 14,
         title: "El secreto de Anubis",
         price: 5950,
         stock: 4,
@@ -122,7 +92,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Steffany%20Kennels/El%20secreto%20de%20Anubis%20(3)/big.jpg",
     },
     {
-        id: 15,
         title: "Después",
         price: 7300,
         stock: 4,
@@ -132,7 +101,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Stephen%20King/Despues%20(60)/big.jpg",
     },
     {
-        id: 16,
         title: "El instituto",
         price: 10500,
         stock: 63,
@@ -142,7 +110,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Stephen%20King/El%20instituto%20(56)/big.jpg",
     },
     {
-        id: 17,
         title: "El laberinto del fauno",
         price: 7800,
         stock: 7,
@@ -152,7 +119,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/ab/Guillermo%20del%20Toro/El%20laberinto%20del%20fauno%20(6)/big.jpg",
     },
     {
-        id: 18,
         title: "Roma",
         price: 9750,
         stock: 63,
@@ -162,7 +128,6 @@ export const products = [
         img: "https://assets.lectulandia.com/b/Steven%20Saylor/Roma.%20La%20novela%20de%20la%20antigua%20Roma%20(1)/big.jpg",
     },
     {
-        id: 19,
         title: "El baile de las estatuas",
         price: 9500,
         stock: 21,

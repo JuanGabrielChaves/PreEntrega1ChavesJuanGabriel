@@ -8,13 +8,13 @@
 }
 
 .listContainer {
-    margin: auto;
-    width: 80%;
+    margin: 0.5rem auto;
+    width: 50%;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
@@ -24,11 +24,11 @@
 
 .itemContainer {
     margin: 2px auto;
-    width: 80%;
+    width: 50%;
     display: grid;
-    grid-template-columns: 5fr 1fr 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     background-color: rgb(197, 188, 188);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
 }

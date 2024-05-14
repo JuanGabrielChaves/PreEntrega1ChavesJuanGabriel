@@ -20,7 +20,7 @@ const CartContextProvider = ({ children }) => {
 
     const getTotalPrice = () => {
         let total = cart.reduce((accum, product) => {
-            return accum + product.quantity * product.price;
+            return accum + product.quantity * product.price?.toFixed(2);
         }, 0);
         return total;
     };

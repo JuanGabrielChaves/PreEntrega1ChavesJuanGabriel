@@ -13,10 +13,10 @@ const ProductCard = ({ title, price, img, id }) => {
                         <Typography>{title}</Typography>
                     </CardContent>
                     <Typography ml={2} fontWeight={"bold"}>
-                        $ {price}.-
+                        $ {price?.toFixed(2)}.-
                     </Typography>
                     <CardActions>
-                        <Link to={`/itemDetail/${Number(id)}`}>
+                        <Link to={`/itemDetail/${id}`}>
                             <Button size="small">Ver detalle</Button>
                         </Link>
                     </CardActions>

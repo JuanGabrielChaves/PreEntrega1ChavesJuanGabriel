@@ -13,7 +13,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import CartWidget from "../../common/cartWidget/CartWidget.jsx";
 
-const pages = ["home", "terror", "intriga", "novela"];
+const pages = ["home", "terror", "intriga", "novela", "ciencia-ficcion"];
 
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);

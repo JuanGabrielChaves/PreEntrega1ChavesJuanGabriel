@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CounterPresentacional from "./CounterPresentacional";
+import Swal from "sweetalert2";
 
 export const CounterContainer = ({ stock, initial = 1, onAdd }) => {
     const [contador, setContador] = useState(initial);
@@ -16,7 +17,11 @@ export const CounterContainer = ({ stock, initial = 1, onAdd }) => {
         if (contador > 1) {
             setContador(contador - 1);
         } else {
-            alert("no podes menos de 1");
+            Swal.fire({
+                icon: "error",
+                title: "Error",
+                text: "No puede ser menos que 1",
+            });
         }
     };
 
