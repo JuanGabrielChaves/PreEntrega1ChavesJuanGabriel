@@ -11,7 +11,6 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 const ItemListContainer = () => {
     const { name } = useParams();
     const [items, setItems] = useState([]);
-    const [error, setError] = useState(null);
 
     useEffect(() => {
         //Trae todos los documentos:
@@ -71,7 +70,7 @@ const ItemListContainer = () => {
             </div>
         );
     }
-    return <ItemList items={items} error={error} />;
+    return <ItemList items={items} />;
 };
 
 export default ItemListContainer;

@@ -4,7 +4,6 @@ import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 import "./Cart.css";
 const Cart = ({ cart, clearCartAlert, deleteProductById, totalPrice }) => {
-    console.log(cart);
     return (
         <div>
             <h1>Su carrito de compras:</h1>

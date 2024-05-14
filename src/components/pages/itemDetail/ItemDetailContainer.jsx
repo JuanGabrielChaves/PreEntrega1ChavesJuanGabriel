@@ -16,7 +16,6 @@ const ItemDetailContainer = () => {
 
     let initial = getQuantityById(+id);
     useEffect(() => {
-        console.log(id);
         let productsCollection = collection(db, "products");
         let refDoc = doc(productsCollection, id);
         getDoc(refDoc).then((res) => {
