@@ -38,8 +38,8 @@ const Checkout = () => {
                 setOrderId(docRef.id);
 
                 const refDoc = doc(collection(db, "orders"), docRef.id);
-                const ordenDeCompra = await getDoc(refDoc);
-                setOrder({ id: ordenDeCompra.id, ...ordenDeCompra.data() });
+                const docSnapshot = await getDoc(refDoc);
+                setOrder({ id: docSnapshot.id, ...docSnapshot.data() });
                 console.log(order);
 
                 cart.forEach((product) => {
@@ -67,19 +67,19 @@ const Checkout = () => {
                     <h1>Orden de compra:</h1>
                     <div className="contactData">
                         <h4 id="title">Datos del comprador:</h4>
-                        <h4>Nombre: {order.buyer.nombre}</h4>
-                        <h4>Telefono: {order.buyer.telefono}</h4>
-                        <h4>Email: {order.buyer.email}</h4>
+                        <h4>Nombre: {order.buyer?.nombre}</h4>
+                        <h4>Telefono: {order.buyer?.telefono}</h4>
+                        <h4>Email: {order.buyer?.email}</h4>
                     </div>
                     <div className="products">
-                        {order.items.length > 0 && (
+                        {order.items?.length > 0 && (
                             <div className="listContainer">
                                 <div>Descripción del Producto</div>
                                 <div>Precio</div>
                                 <div>Cantidad</div>
                             </div>
                         )}
-                        {order.items.map((product) => (
+                        {order.items?.map((product) => (
                             <div className="itemContainer" key={product.id}>
                                 <h4>{product.title}</h4>
                                 <h4>$ {product.price?.toFixed(2)}</h4>
@@ -87,14 +87,14 @@ const Checkout = () => {
                             </div>
                         ))}
                     </div>
-                    <h3>Total: $ {order.total.toFixed(2)}</h3>
-                    <h4>ID de la operación: {order.id}</h4>
+                    <h3>Total: $ {order.total?.toFixed(2)}</h3>
+                    <h4>ID de la operación: {order?.id}</h4>
                     <h2>Muchas gracias por su compra !</h2>
                     <h5>Conserve el número de ID de la operación</h5>
                 </>
             ) : (
                 <>
-                    <h3>Para finalizar la compra ingrese los datos de contacto</h3>
+                    <h3>Para finalizar ingrese los datos de contacto</h3>
                     <div className="container">
                         <form action="" onSubmit={handleSubmit} className="form">
                             <TextField className="inputField" fullWidth={true} id="nombre" name="nombre" label="nombre" variant="outlined" onChange={handleChange} margin="dense" error={errors.nombre ? true : false} helperText={errors.nombre} />
