@@ -62,11 +62,17 @@ const Checkout = () => {
     console.log(order);
     return (
         <>
+            {error && (
+                <>
+                    <h1>Se produjo un error...</h1>
+                    <h2>{error}</h2>
+                </>
+            )}
             {orderId ? (
                 <>
-                    <h1>Orden de compra:</h1>
+                    <h1 id="title">ORDEN DE COMPRA:</h1>
                     <div className="contactData">
-                        <h4 id="title">Datos del comprador:</h4>
+                        <h4 id="comprador">Datos del comprador:</h4>
                         <h4>Nombre: {order.buyer?.nombre}</h4>
                         <h4>Telefono: {order.buyer?.telefono}</h4>
                         <h4>Email: {order.buyer?.email}</h4>
@@ -81,9 +87,9 @@ const Checkout = () => {
                         )}
                         {order.items?.map((product) => (
                             <div className="itemContainer" key={product.id}>
-                                <h4>{product.title}</h4>
-                                <h4>$ {product.price?.toFixed(2)}</h4>
-                                <h4>{product.quantity}</h4>
+                                <h4 className="items">{product.title}</h4>
+                                <h4 className="items">$ {product.price?.toFixed(2)}</h4>
+                                <h4 className="items">{product.quantity}</h4>
                             </div>
                         ))}
                     </div>

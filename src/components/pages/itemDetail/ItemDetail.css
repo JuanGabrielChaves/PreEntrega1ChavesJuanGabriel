@@ -2,7 +2,7 @@
 
 .grid-container {
     height: 80%;
-    margin: auto;
+    margin: 2.5rem auto;
     width: 65vw;
     display: grid;
     grid-template-columns: 0.5fr 1fr 2.5fr;

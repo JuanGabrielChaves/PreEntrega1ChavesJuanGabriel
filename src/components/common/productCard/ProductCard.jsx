@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ title, price, img, id }) => {
     return (
-        <Grid container rowSpacing={2} columnSpacing={{ xs: 2, sm: 5, md: 7 }}>
+        <Grid container rowSpacing={0} columnSpacing={{ xs: 2, sm: 5, md: 7 }}>
             <Grid item width={325}>
-                <Card sx={{ width: 250, marginLeft: 3, marginTop: 3 }}>
+                <Card sx={{ width: 250, marginLeft: 3, marginTop: 1 }}>
                     <CardMedia image={img} component="img" alt={`imagen del libro ${title}`} />
                     <CardContent>
                         <Typography>{title}</Typography>

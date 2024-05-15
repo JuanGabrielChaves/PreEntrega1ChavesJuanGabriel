@@ -4,11 +4,11 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
     background-color: antiquewhite;
     width: 40%;
     padding: 1rem;
-    margin: auto;
+    margin: 0 auto;
     border-radius: 5%;
 }
 
@@ -42,12 +42,21 @@ h4 {
     font-size: 1.5rem;
     line-height: 2rem;
 }
+#comprador {
+    margin: 0;
+    color: antiquewhite;
+}
 #title {
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
     color: black;
 }
-
+.items {
+    color: black;
+}
 h5 {
+    text-align: center;
+}
+h4 {
     text-align: center;
     color: antiquewhite;
 }

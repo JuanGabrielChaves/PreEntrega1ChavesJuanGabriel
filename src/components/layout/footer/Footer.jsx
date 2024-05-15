@@ -10,7 +10,6 @@ const Footer = () => {
                 sx={{
                     width: "100%",
                     height: "auto",
-                    paddingTop: "1rem",
                     paddingBottom: "1rem",
                 }}>
                 <Container maxWidth="lg">
