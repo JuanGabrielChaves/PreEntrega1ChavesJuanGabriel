@@ -45,10 +45,6 @@ const ItemListContainer = () => {
         });
     }, [name]);
 
-    // const addDocProductsToDB = () => {
-    //     let productsCollection = collection(db, "products");
-    //     products.forEach((product) => addDoc(productsCollection, product));
-    // };
     if (items.length === 0) {
         return (
             <div className="skeletonContainer">

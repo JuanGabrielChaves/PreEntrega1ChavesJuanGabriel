@@ -1,7 +1,6 @@
 /** @format */
 
 import Layout from "./components/layout/Layout";
-import Cart from "./components/pages/cart/Cart.jsx";
 import Checkout from "./components/pages/checkout/Checkout.jsx";
 import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer.jsx";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer.jsx";
