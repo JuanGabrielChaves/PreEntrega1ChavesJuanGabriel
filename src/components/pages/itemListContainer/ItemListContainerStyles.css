@@ -1,5 +1,8 @@
 /** @format */
-
+* {
+    align-content: space-around;
+    justify-content: space-around;
+}
 h1 {
     margin: 2rem;
     text-align: center;
