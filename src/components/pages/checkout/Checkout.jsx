@@ -40,7 +40,6 @@ const Checkout = () => {
                 const refDoc = doc(collection(db, "orders"), docRef.id);
                 const docSnapshot = await getDoc(refDoc);
                 setOrder({ id: docSnapshot.id, ...docSnapshot.data() });
-                console.log(order);
 
                 cart.forEach((product) => {
                     let productRef = doc(db, "products", product.id);
@@ -59,7 +58,7 @@ const Checkout = () => {
         }),
         validateOnChange: false,
     });
-    console.log(order);
+
     return (
         <>
             {error && (
