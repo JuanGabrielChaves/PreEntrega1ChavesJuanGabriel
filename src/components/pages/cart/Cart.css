@@ -9,7 +9,7 @@
 
 .listContainer {
     margin: 0.5rem auto;
-    width: 50%;
+    width: 65%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     align-items: center;
@@ -24,7 +24,7 @@
 
 .itemContainer {
     margin: 2px auto;
-    width: 50%;
+    width: 65%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     align-items: center;

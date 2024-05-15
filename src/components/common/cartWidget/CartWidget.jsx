@@ -16,7 +16,14 @@ const CartWidget = () => {
                 <Tooltip title="Carrito de compras">
                     <IconButton sx={{ p: 0 }}>
                         <Badge badgeContent={totalItems} color="secondary">
-                            <ShoppingCartRoundedIcon sx={{ color: "#ffff" }} />
+                            <ShoppingCartRoundedIcon
+                                sx={{
+                                    color: "#ffff",
+                                    "&:hover": {
+                                        color: "black",
+                                    },
+                                }}
+                            />
                         </Badge>
                     </IconButton>
                 </Tooltip>

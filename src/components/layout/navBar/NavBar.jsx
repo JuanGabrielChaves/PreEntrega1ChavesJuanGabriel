@@ -31,6 +31,7 @@ function NavBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Link
+                        underline="none"
                         component={ReactRouterLink}
                         to="/"
                         sx={{
@@ -39,9 +40,12 @@ function NavBar() {
                             fontFamily: "roboto",
                             fontWeight: 700,
                             letterSpacing: ".1rem",
-                            color: "inherit",
+                            color: "black",
                             textDecoration: "none",
-                            fontSize: "1.5rem",
+                            fontSize: "2rem",
+                            "&:hover": {
+                                color: "white",
+                            },
                         }}>
                         The Bookstore
                     </Link>
@@ -69,7 +73,20 @@ function NavBar() {
                             }}>
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Link component={ReactRouterLink} to={page !== "home" ? `/category/${page}` : `/`} key={page} sx={{ m: 0, display: "block", fontSize: "1rem" }} onClick={handleCloseNavMenu}>
+                                    <Link
+                                        component={ReactRouterLink}
+                                        to={page !== "home" ? `/category/${page}` : `/`}
+                                        key={page}
+                                        sx={{
+                                            m: 0,
+                                            display: "block",
+                                            fontSize: "1rem",
+                                            "&:hover": {
+                                                color: "black",
+                                            },
+                                        }}
+                                        onClick={handleCloseNavMenu}
+                                        underline="none">
                                         {page}
                                     </Link>
                                 </MenuItem>
@@ -79,7 +96,22 @@ function NavBar() {
 
                     <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex", justifyContent: "center" } }}>
                         {pages.map((page) => (
-                            <Link component={ReactRouterLink} to={page !== "home" ? `/category/${page}` : `/`} key={page} sx={{ m: 2, color: "white", display: "block", fontSize: "2rem", fontFamily: "serif" }} onClick={handleCloseNavMenu}>
+                            <Link
+                                component={ReactRouterLink}
+                                to={page !== "home" ? `/category/${page}` : `/`}
+                                key={page}
+                                sx={{
+                                    m: 2,
+                                    color: "white",
+                                    display: "block",
+                                    fontSize: "2rem",
+                                    fontFamily: "serif",
+                                    "&:hover": {
+                                        color: "black",
+                                    },
+                                }}
+                                onClick={handleCloseNavMenu}
+                                underline="none">
                                 {page}
                             </Link>
                         ))}
