@@ -13,25 +13,6 @@ const ItemListContainer = () => {
     const [items, setItems] = useState([]);
 
     useEffect(() => {
-        //Trae todos los documentos:
-        // const productsCollection = collection(db, "products");
-        // getDocs(productsCollection).then((res) => {
-        //     let newArray = res.docs.map((doc) => {
-        //         return { id: doc.id, ...doc.data() };
-        //     });
-        //     setItems(newArray);
-        // });
-
-        // Trae los documentos filtrados por el nombre:
-        // const productsCollection = collection(db, "products");
-        // let consulta = query(productsCollection, where("category", "==", name));
-        // getDocs(consulta).then((res) => {
-        //     let newArray = res.docs.map((doc) => {
-        //         return { id: doc.id, ...doc.data() };
-        //     });
-        //     setItems(newArray);
-        // });
-
         const productsCollection = collection(db, "products");
         let consulta = productsCollection;
         if (name) {

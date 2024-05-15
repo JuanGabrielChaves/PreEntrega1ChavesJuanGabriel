@@ -13,7 +13,7 @@ import CartWidget from "../../common/cartWidget/CartWidget.jsx";
 import { Link } from "@mui/material";
 import { Link as ReactRouterLink } from "react-router-dom";
 
-const pages = ["home", "terror", "intriga", "novela", "ciencia-ficcion"];
+const pages = ["home", "terror", "intriga", "novela", "ciencia-ficcion", "fantastico"];
 
 function NavBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
