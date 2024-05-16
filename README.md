@@ -53,4 +53,14 @@ La pagina esta adaptada para que se visualice correctamente en todos los disposi
 
 ## Para visitar la página haga click en el enlace:
 
-## Screenshots
+https://proyecto-final-react-chaves.vercel.app/
+
+## Imágenes de la aplicación:
+
+![Alt text](./public/CapturaDelHome.png "Home")
+![Alt text](./public/CapturaFiltrosPorGenero.png "Productos Filtrados por Genero")
+![Alt text](./public/CapturaDescripcionProducto.png "Descripción del Producto")
+![Alt text](./public/CapturaAgregadoAlCarrito.png "Agregado al Carrito de Compras")
+![Alt text](./public/CapturaCarrito.png "Carrito de Compras")
+![Alt text](./public/CapturaDatosComprador.png "Envio de datos del Comprador")
+![Alt text](./public/CapturaOrdenCompra.png "Orden de Compra")
