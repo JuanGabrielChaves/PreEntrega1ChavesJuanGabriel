@@ -7,7 +7,7 @@ const ProductCard = ({ title, price, img, id }) => {
     return (
         <Grid container rowSpacing={0} columnSpacing={{ xs: 2, sm: 5, md: 7 }}>
             <Grid item width={325}>
-                <Card sx={{ width: 250, marginLeft: 3, marginTop: 1 }}>
+                <Card sx={{ width: 250, margin: "1rem auto" }}>
                     <CardMedia image={img} component="img" alt={`imagen del libro ${title}`} />
                     <CardContent>
                         <Typography>{title}</Typography>

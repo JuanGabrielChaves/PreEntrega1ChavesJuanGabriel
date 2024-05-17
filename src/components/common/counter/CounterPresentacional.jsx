@@ -13,9 +13,11 @@ const CounterPresentacional = ({ restar, sumar, contador, onAdd }) => {
             <Button variant="contained" onClick={sumar}>
                 +
             </Button>
-            <IconButton color="white" title="Agregar al carrito" onClick={() => onAdd(contador)}>
-                <AddShoppingCartIcon fontSize="large" color="action" />
-            </IconButton>
+            <div>
+                <IconButton color="white" title="Agregar al carrito" onClick={() => onAdd(contador)}>
+                    <AddShoppingCartIcon fontSize="large" color="action" />
+                </IconButton>
+            </div>
         </div>
     );
 };
