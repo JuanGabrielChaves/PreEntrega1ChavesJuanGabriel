@@ -20,11 +20,14 @@
 
 .itemBtn {
     justify-self: end;
+    margin-left: 1rem;
+}
+h5 {
+    margin-right: 2.5rem;
 }
 
 .itemContainer {
     margin: 2px auto;
-    width: 65%;
     display: grid;
     grid-template-columns: 3fr 1fr 1fr 1fr;
     align-items: center;
@@ -34,4 +37,33 @@
 }
 h4 {
     color: black;
+}
+@media screen and (min-width: 280px) {
+    .itemContainer {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 360px) {
+    .itemContainer {
+        width: 100%;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 768px) {
+    .itemContainer {
+        width: 90%;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 912px) {
+    .itemContainer {
+        width: 85%;
+        margin: auto;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .itemContainer {
+        width: 80%;
+    }
 }
